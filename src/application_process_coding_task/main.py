@@ -1,6 +1,12 @@
 import typer
 from fastapi import FastAPI
 import uvicorn
+from pydantic import BaseModel
+
+class item(BaseModel):
+    id: int
+    name: str
+    description: str
 
 # Initialize FastAPI for the HTTP endpoints
 api = FastAPI(title="Coding Task API")
